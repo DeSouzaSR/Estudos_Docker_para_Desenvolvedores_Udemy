@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  db: # Container de MySQL
+    image: mysql:5.7 # FROM mysql5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment: 
+      MYSQL_ROOT_PASSWORKD: wordpress
+      MYSQL_DATABASE: workpress
+      
